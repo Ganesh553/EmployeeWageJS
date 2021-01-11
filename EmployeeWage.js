@@ -17,7 +17,6 @@ class EmployeeWage{
                     emp_Hr=8;
                     break;
                 case Absent:
-                    emp_Hr=0;
                     console.log("Employee Is Absent");
                     break;
             }
