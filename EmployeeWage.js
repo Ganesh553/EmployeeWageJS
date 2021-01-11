@@ -7,14 +7,18 @@ class EmployeeWage{
         var Absent=0;
         var NUMBER_OF_WORKING_DAYS=20;
         var Total_Employee_Wage=0;
-        for (var Day=0;Day < NUMBER_OF_WORKING_DAYS; Day++){
+        var day=0;
+        var DailyWage = new Map()
+        for (var Day=1;Day <= NUMBER_OF_WORKING_DAYS; Day++){
             let Employee = Math.floor(Math.random() * 3);
             switch(Employee){
                 case Full_Time:
                     emp_Hr=8;
+                    DailyWage[day++] = emp_Hr;
                     break;
                 case Part_Time:
-                    emp_Hr=8;
+                    emp_Hr=16;
+                    DailyWage[day++] = emp_Hr;
                     break;
                 case Absent:
                     console.log("Employee Is Absent");
@@ -23,6 +27,9 @@ class EmployeeWage{
             var Employee_Wage = Emp_Rate_Per_Hr * emp_Hr;
             Total_Employee_Wage= Total_Employee_Wage + Employee_Wage;           
         }
+        DailyWage["Employee Daily Wage"] =Employee_Wage
+        DailyWage["Total_Employee_Wage"] =Total_Employee_Wage
+        console.log(DailyWage)
         console.log("Employee Daily Wage: ",Employee_Wage)
         console.log("Total Wage of Employee For 20 Days: ",Total_Employee_Wage)
     }
