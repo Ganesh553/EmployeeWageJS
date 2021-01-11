@@ -27,6 +27,11 @@ class EmployeeWage{
         console.log("Employee Daily Wage: ",Employee_Wage)
         console.log("Total Wage of Employee For 20 Days: ",Total_Employee_Wage)
     }
+    WorkingHrs(day, hours){
+        return day*hours;
+    }
 }
 let ref = new EmployeeWage()
 ref.employeeDailyWage();
+var total_Working_Hours=ref.WorkingHrs(20,8)
+console.log("Total number of Working Hours is: ",total_Working_Hours)
