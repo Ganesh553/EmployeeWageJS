@@ -24,8 +24,8 @@ class EmployeeWage{
             var Employee_Wage = Emp_Rate_Per_Hr * emp_Hr;
             Total_Employee_Wage= Total_Employee_Wage + Employee_Wage;           
         }
-        console.log("Employee Daily Wage",Employee_Wage)
-        console.log("Total Wage of Employee For 20 Days",Total_Employee_Wage)
+        console.log("Employee Daily Wage: ",Employee_Wage)
+        console.log("Total Wage of Employee For 20 Days: ",Total_Employee_Wage)
     }
 }
 let ref = new EmployeeWage()
