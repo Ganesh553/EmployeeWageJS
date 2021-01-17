@@ -4,6 +4,21 @@ class EmployeeWage{
         var Part_Time = 2;
         var Emp_Rate_Per_Hr = 20;
         var emp_Hr = 0;
+        let Employee = Math.floor(Math.random() * 3);
+        switch(Employee){
+            case Full_Time:
+                emp_Hr=8;
+                break;
+            case Part_Time:
+                emp_Hr=8;
+                break;
+            default:
+                emp_Hr=0;
+                console.log("Employee Is Absent");
+                return;
+        }
+        var Employee_Wage = Emp_Rate_Per_Hr * emp_Hr;
+        console.log(Employee_Wage)
         var Absent=0;
         var NUMBER_OF_WORKING_DAYS=20;
         var Total_Employee_Wage=0;
